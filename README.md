@@ -1,24 +1,13 @@
-# README
+https://www.theodinproject.com/lessons/ruby-on-rails-members-only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+User:
+    -name [string]{presence}
+    -email [string]{presence}
+    -password [string] {length:5-20}
 
-Things you may want to cover:
+    *has_many :posts
 
-* Ruby version
+Post: -> new create index
+    -text [text] {length :max450}
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    *belongs_to :user
