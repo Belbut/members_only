@@ -1,2 +1,9 @@
 <h1>Posts#new</h1>
 <p>Find me in app/views/posts/new.html.erb</p>
+
+<p>Hello <%= current_user.username%></p>
+<%= form_with model: @post do |form|%>
+  <%= form.label :comment, "Post a comment:" %>
+  <%= form.text_area :comment, size: "70x15"%>
+  <%= form.submit "Submit" %>
+<%end%>
