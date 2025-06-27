@@ -1,2 +1,9 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>Club House</h1>
+
+<% @posts.each do |post|%>
+<div class="comment">
+    <p class=text><%=post.comment%></p>
+    <p class="author"> by:<%= user_signed_in? ? post.user.username : "private"%> </p>
+</div>
+
+<% end%>

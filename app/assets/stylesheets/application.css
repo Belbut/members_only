@@ -8,3 +8,11 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ .comment{
+    width: 600px;
+ }
+
+ .comment .author{
+    text-align: end;
+ }
