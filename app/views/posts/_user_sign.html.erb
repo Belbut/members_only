@@ -1,0 +1,13 @@
+<div>
+<% if user_signed_in? %>
+<p style="margin: 0;">You are logged in has <%=current_user.username%> </p>
+
+<%# https://chimkan.com/rails-7-and-devise-issue-with-sign-out/ %>
+<%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
+
+<% else %>
+<p> You are not logged in </p>
+<%= link_to "Login", user_session_path %>
+
+<% end%>
+</div>
