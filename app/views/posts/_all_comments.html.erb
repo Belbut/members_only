@@ -1,0 +1,6 @@
+<% @posts.each do |post|%>
+<div class="comment">
+    <p class=text><%=post.comment%></p>
+    <p class="author"> by:<%= user_signed_in? ? post.user.username : "?"%> </p>
+</div>
+<% end%>
